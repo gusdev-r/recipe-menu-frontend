@@ -1,0 +1,45 @@
+<form class="w-[27rem] p-6 rounded-lg shadow-md">
+
+    <div class="mb-4">
+        <mat-form-field class="w-full">
+            <mat-label class="text-grey-200">Nomeie sua comida favorita</mat-label>
+            <input matInput 
+            placeholder="Ex. Pizza" value=""
+            name="Title" [(ngModel)]="recipeItem.title" class="py-2 px-3 text-grey-200 mt-1 focus:shadow-outline"
+            >
+          </mat-form-field>
+    </div>
+
+    <div class="mb-4">
+        <mat-form-field class="w-full">
+            <mat-label class="text-grey-200">Descrição</mat-label>
+            <input matInput 
+            placeholder="Ex. Pizza de peperoni com azeitonas negras [...]" value=""
+            name="Description" [(ngModel)]="recipeItem.description" class="py-2 px-3 text-grey-200 mt-1 focus:shadow-outline"
+            >
+          </mat-form-field>
+    </div>
+    <div class="mb-4">
+        <mat-form-field class="w-full">
+            <mat-label class="text-grey-200">Imagem</mat-label>
+            <input matInput 
+            placeholder="Imagem URL" value=""
+            name="image" [(ngModel)]="recipeItem.image" class="py-2 px-3 text-grey-200 mt-1 focus:shadow-outline"
+            >
+          </mat-form-field>
+    </div>
+    <div class="mb-4">
+        <mat-radio-group [(ngModel)]="recipeItem.foodType" aria-label="Selecione uma opção">
+            <mat-radio-button value="veg">Vegetariana</mat-radio-button>
+            <mat-radio-button value="other">Outras</mat-radio-button>
+          </mat-radio-group>
+    </div>
+
+    <div>
+        <button mat-raised-button color="primary" type="submit">
+            Criar
+        </button>
+    </div>
+
+
+</form>
